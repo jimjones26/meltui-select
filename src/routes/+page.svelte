@@ -18,9 +18,12 @@
 			fitViewport: true,
 			sameWidth: true
 		},
-		multiple: false
+		multiple: false,
+		defaultSelected: { value: 'Chocolate', label: 'Chocolate' }
 	});
 </script>
+
+{$selectedLabel}
 
 <div class="flex flex-col gap-1">
 	<!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
