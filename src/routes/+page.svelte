@@ -9,7 +9,7 @@
 
 	const {
 		elements: { trigger, menu, option, group, groupLabel, label },
-		states: { selectedLabel, open },
+		states: { selectedLabel, open, selected },
 		helpers: { isSelected }
 	} = createSelect({
 		forceVisible: true,
@@ -23,11 +23,11 @@
 	});
 </script>
 
-{$selectedLabel}
+{$selected?.value}
 
-<div class="flex flex-col gap-1">
+<div class="flex flex-row gap-1 items-center">
 	<!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
-	<label class="block text-magnum-900" use:melt={$label}>Favorite Flavor</label>
+	<label class="block text-magnum-900" use:melt={$label}>X:</label>
 	<button
 		class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2
   text-magnum-700 shadow transition-opacity hover:opacity-90"
